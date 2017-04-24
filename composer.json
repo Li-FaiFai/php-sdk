@@ -1,13 +1,13 @@
 {
-    "name": "Li-FaiFai/php-sdk",
+    "name": "li-faifai/php-sdk",
     "type": "library",
     "description": "SDK for PHP",
-    "keywords": ["Li-FaiFai", "php", "sdk", "wechat"],
+    "keywords": ["li-faifai", "php", "sdk", "wechat"],
     "homepage": "https://github.com/Li-FaiFai/php-sdk",
     "license": "MIT",
     "authors": [
         {
-            "name": "Li-FaiFai",
+            "name": "li-faifai",
             "email": "lifaifai@foxmail.com",
             "homepage": "https://github.com/Li-FaiFai/php-sdk"
         }
