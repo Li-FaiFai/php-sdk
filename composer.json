@@ -1,0 +1,21 @@
+{
+    "name": "Li-FaiFai/php-sdk",
+    "type": "library",
+    "description": "SDK for PHP",
+    "keywords": ["Li-FaiFai", "php", "sdk", "wechat"],
+    "homepage": "https://github.com/Li-FaiFai/php-sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Li-FaiFai",
+            "email": "lifaifai@foxmail.com",
+            "homepage": "https://github.com/Li-FaiFai/php-sdk"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-4": {"Wechat\\": "src/Wechat"},
+    }
+}
