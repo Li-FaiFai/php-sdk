@@ -1,9 +1,12 @@
 <?php
 require_once __DIR__ . '/../autoload.php';
 
-use Wechat\Auth;
+use wechat\Wechat;
 
-$objAuth = new Auth();
-$result = $objAuth->test();
-
-echo 'hello world';
+// 操作 - 初始化对象。
+$wechat = new Wechat([
+	'appId'          => '',
+	'appSecret'      => '',
+	'token'          => '',
+	'encodingAesKey' => '',
+]);
