@@ -10,4 +10,4 @@ composer.lock
 vendor
 src/package.xml
 .idea/
-/tmp
+/src/tmp
