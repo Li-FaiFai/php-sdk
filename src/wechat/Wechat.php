@@ -11,7 +11,7 @@ class Wechat
      * 数据缓存前缀
      * @var string
      */
-    public $cachePrefix = 'cache_wechat_sdk_mp.txt';
+    public $cachePrefix = 'cache_wechat_sdk_mp';
     /**
      * 公众号appId
      * @var string

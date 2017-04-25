@@ -5,4 +5,3 @@ require_once __DIR__ . '/wechat.php';
 
 // 获取 - access token
 $access_token = $wechat->getAccessToken();
-var_dump($wechat);
