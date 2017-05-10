@@ -277,8 +277,6 @@ class Wechat
         ], $data), [
             'access_token' => $this->getAccessToken()
         ]);
-        echo "<Pre>";
-        var_dump($result);
         return isset($result['msgid']) ? $result['msgid'] : false;
     }
 
