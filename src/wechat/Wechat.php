@@ -261,6 +261,45 @@ class Wechat
     }
 
     /**
+     * 发送模板消息
+     */
+    const WECHAT_TEMPLATE_MESSAGE_SEND_PREFIX = '/cgi-bin/message/template/send';
+    /**
+     * 发送模板消息
+     * @param array $data 模板需要的数据
+     * @return int|bool
+     */
+    public function sendTemplateMessage(array $data)
+    {
+        $result = $this->httpRaw(self::WECHAT_TEMPLATE_MESSAGE_SEND_PREFIX, array_merge([
+            'url' => null,
+            'topcolor' => '#FF0000'
+        ], $data), [
+            'access_token' => $this->getAccessToken()
+        ]);
+        echo "<Pre>";
+        var_dump($result);
+        return isset($result['msgid']) ? $result['msgid'] : false;
+    }
+
+    /**
+     * Http Raw数据 Post 请求
+     * @param $url
+     * @param $postOptions
+     * @param array $options
+     * @return mixed
+     */
+    public function httpRaw($url, $postOptions, array $options = [])
+    {
+        return $this->parseHttpRequest(function($url, $postOptions) {
+            return $this->http($url, [
+                CURLOPT_POST => true,
+                CURLOPT_POSTFIELDS => is_array($postOptions) ? json_encode($postOptions, JSON_UNESCAPED_UNICODE) : $postOptions
+            ]);
+        }, $this->httpBuildQuery($url, $options), $postOptions);
+    }
+
+    /**
      * Api url 组装
      * @param $url
      * @param array $options
