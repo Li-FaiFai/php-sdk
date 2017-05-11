@@ -89,7 +89,7 @@ class Wechat
                 if (!($result = $this->requestAccessToken())) {
                     throw new \Exception("Fail to get access_token from wechat server.");
                 }
-                $result['expire'] = $time + $result['expires_in'];
+                $result['expire'] = $time + (int)$result['expires_in'];
                 $this->setCache('access_token', $result);
             }
             $this->setAccessToken($result);
